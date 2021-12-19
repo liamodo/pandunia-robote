@@ -13,8 +13,19 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
+(async () => {
+	try {
+		console.log('Started refreshing application (/) commands.');
+		await rest.put(
+			Routes.applicationGuildCommands(process.env.CLIENT_ID),{ body: commands },);
+		console.log('Successfully reloaded application (/) commands.');
+	} catch (error) {
+		console.error(error);
+	}
+})();
+
 //HOW GET GUILD ID?
 //client.guilds.cache.get(guildID)
-rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID), { body: commands })
+/*rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
-	.catch(console.error);
+	.catch(console.error);*/
