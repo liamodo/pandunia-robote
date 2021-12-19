@@ -1,8 +1,8 @@
+app.listen(5000, () => console.log('listening on port'));
 // Require the necessary discord.js classes
 const fs = require('fs'); //node.js filesystem
 const { Client, Collection, Intents } = require('discord.js');
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require('dotenv').config();
 //const { token } = require('./config.json');
 
 // Create a new client instance
