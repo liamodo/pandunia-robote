@@ -1,8 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const { MessageAttachment, MessageEmbed } = require('discord.js');
 //const sqlite3 = require( 'sqlite3' ).verbose();
 const Database = require('better-sqlite3');
-const { MessageAttachment } = require('discord.js'); //for the image attachment in the footer
 
 let db = new Database('db/fate.db');
 
