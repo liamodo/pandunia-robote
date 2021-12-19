@@ -6,7 +6,7 @@
   "author": "LOD",
   "scripts": {
     "start": "node your-script.js"
-  }
+  },
   "dependencies": {
     "@discordjs/builders": "^0.9.0",
     "@discordjs/rest": "^0.1.0-canary.0",
