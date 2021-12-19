@@ -1,4 +1,3 @@
-app.listen(5000, () => console.log('listening on port'));
 // Require the necessary discord.js classes
 const fs = require('fs'); //node.js filesystem
 const { Client, Collection, Intents } = require('discord.js');
